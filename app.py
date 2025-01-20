@@ -1,6 +1,8 @@
 import os
 import importlib
 from colorama import Fore, Style, init
+from loader.route_loader import load_routes
+
 
 # Initialize colorama
 init(autoreset=True)
@@ -42,6 +44,8 @@ def load_modules():
 from flask import Flask
 
 app = Flask(__name__)
+load_routes(app)
+
 
 @app.route('/')
 def home():
