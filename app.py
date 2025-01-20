@@ -47,11 +47,6 @@ app = Flask(__name__)
 load_routes(app)
 
 
-@app.route('/')
-def home():
-    log_info("Home route accessed.")
-    return 'Hello, World!'
-
 # Run the app
 if __name__ == '__main__':
     log_info("Starting the Flask app.")
